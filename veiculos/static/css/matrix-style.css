@@ -153,6 +153,10 @@ hr{ border-top-color:#dadada;}
 	padding: 0;
 	position: absolute;
 	width: 220px;
+	background-color: #37414b;
+}
+#icone{
+	background-color: #37414b;
 }
 #sidebar > ul > li {
 	display: block;
@@ -161,7 +165,7 @@ hr{ border-top-color:#dadada;}
 #sidebar > ul > li > a {
 	padding: 10px 0 10px 15px;
 	display: block;
-	color: #939da8;
+	color: #fff;
 }
 #sidebar > ul > li > a > i {
 	margin-right: 10px;
@@ -610,7 +614,10 @@ hr{ border-top-color:#dadada;}
 	margin: 0;
 	padding: 0;
 }
-.recent-posts li, .recent-comments li, .article-post li, .recent-users li {
+.recent-posts li, .recent-comments li, 
+
+
+rticle-post li, .recent-users li {
 	border-bottom: 1px dotted #AEBDC8;
 	list-style: none outside none;
 	padding: 10px;

@@ -1,9 +1,21 @@
 {% extends "base.html" %}
-
 {% block content %}
 <h1>Detalhes do Automóvel!</h1>
+<div>
+      <label>Tipo:</label>
+      {{veiculo.tipo}}
+</div>
 <div>
       <label>Nome:</label>
       {{veiculo.nome}}
 </div>
+<div>
+      <label>Ano de Fabricação:</label>
+      {{veiculo.ano}}
+</div>
+<div>
+      <label>Fabricante:</label>
+      {{veiculo.fabricante}}
+</div>
+
 {% endblock %}

@@ -12,3 +12,6 @@ def automovel_list(request):
 def automovel_show(request, veiculo_id):
       veiculo = Veiculo.objects.get(pk=veiculo_id)
       return render(request, 'automovel/show.html', {'veiculo':veiculo})
+
+def contato(request):
+      return render(request, 'contato/contato.html')

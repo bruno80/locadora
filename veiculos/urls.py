@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.home),
     path('automovel/', views.automovel_list),
     path('automovel/<int:veiculo_id>/', views.automovel_show),
+    path('contato/', views.contato),
 ]
