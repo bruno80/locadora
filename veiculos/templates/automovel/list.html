@@ -1,34 +1,29 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-      <div class="col-md-12">
-            <table class="table">
-                  <thead>
-                        <tr>
-                              <th>TIPO</th>
-                              <th>NOME</th>
-                              <th>ANO</th>
-                              <th>FABRICANTE</th>
-                        </tr>
-                  </thead>
-                  <tbody>
-                        {% for veiculo in veiculos %}
-                        <tr>
-                              <th>{{veiculo.tipo}}</th>
-                              <th>{{veiculo.nome}}</th>
-                              <th>{{veiculo.ano}}</th>
-                              <th>{{veiculo.fabricante}}</th>
-                              <th>
-                                    <a href="/veiculos/automovel/{{veiculo.id}}/">ver</a>
-                              </th>
-                        </tr>
-                        {% endfor %}
-                  </tbody>
-                  <tfoot>
-                        <tr>
-                              <p>O sistema encontrou {{veiculo | length}} veiculo(s) cadastrado(s)</p>
-                        </tr>
-                  </tfoot>
-            </table>
-      </div>
+<div class="col-md-12">
+      <table class="table">
+            <thead>
+                  <tr>
+                        <th>TIPO</th>
+                        <th>NOME</th>
+                        <th>ANO</th>
+                        <th>FABRICANTE</th>
+                  </tr>
+            </thead>
+            <tbody>
+                  {% for veiculo in veiculos %}
+                  <tr>
+                        <th>{{veiculo.tipo}}</th>
+                        <th>{{veiculo.nome}}</th>
+                        <th>{{veiculo.ano}}</th>
+                        <th>{{veiculo.fabricante}}</th>
+                        <th>
+                              <a href="/veiculos/automovel/{{veiculo.id}}/">ver</a>
+                        </th>
+                  </tr>
+                  {% endfor %}
+            </tbody>
+      </table>
+</div>
 {% endblock %}

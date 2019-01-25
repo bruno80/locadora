@@ -37,23 +37,20 @@
         <li>
           <a id="icone" href="/veiculos/automovel/">
             <i class="icon icon-th-list"></i>
-            <span>Listagem de Carros</span>
-            <span></span>
+            <span>Listagem de Auto's</span>
           </a>
         </li>
         <li> <a href="/veiculos/contato/"><i class="icon icon-inbox"></i> <span>Contato</span></a> </li>
       </ul>
     </div>
-
-
-    <!--main-container-part-->
-    <div id="content">
-      <div class="container-fluid">
-          {% block content %}{% endblock %}
+  </div>
+  <div id="content">
+    <div class="container-fluid">
+      <div>
+        {% block content %}{% endblock %}
       </div>
     </div>
   </div>
-
   <script src="{% static 'js/excanvas.min.js' %}"></script>
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery.ui.custom.js' %}"></script>
