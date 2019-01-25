@@ -8,3 +8,7 @@ def home(request):
 def automovel_list(request):
       veiculos = Veiculo.objects.all()
       return render(request, 'automovel/list.html', {'veiculos':veiculos})
+
+def automovel_show(request, veiculo_id):
+      veiculo = Veiculo.objects.get(pk=veiculo_id)
+      return render(request, 'automovel/show.html', {'veiculo':veiculo})

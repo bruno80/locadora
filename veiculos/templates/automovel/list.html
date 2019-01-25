@@ -1,38 +1,34 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="row">
-   <div class="col-12">
-         <table class="table">
-               <thead>
-                     <tr>
-                           <th>TIPO</th>
-                           <th>NOME</th>
-                           <th>ANO</th>
-                           <th>FABRICANTE</th>
-                     </tr>
-               </thead>
-               <tbody>
-                     {% for veiculo in veiculos %}
-                     <tr>
-                           <td>{{veiculo.tipo}}</td>
-                           <td>{{veiculo.nome}}</td>
-                           <td>{{veiculo.ano}}</td>
-                           <td>{{veiculo.fabricante}}</td>
-                           <td>
-                                 <a href="/veiculos/automovel/{{veiculo.id}}/">ver</a>
-                           </td>
-                     </tr>
-                     {% endfor %}
-               </tbody>
-               <tfoot>
-                     <tr>
-                           <td colspan="4" style="text-align: left;">
-                                 <p>O sistema encontrou {{veiculo | length}} veiculo(s) cadastrado(s)</p>
-                           </td>
-                     </tr>
-               </tfoot>
-         </table>
-   </div>
-</div>
+      <div class="col-md-12">
+            <table class="table">
+                  <thead>
+                        <tr>
+                              <th>TIPO</th>
+                              <th>NOME</th>
+                              <th>ANO</th>
+                              <th>FABRICANTE</th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                        {% for veiculo in veiculos %}
+                        <tr>
+                              <th>{{veiculo.tipo}}</th>
+                              <th>{{veiculo.nome}}</th>
+                              <th>{{veiculo.ano}}</th>
+                              <th>{{veiculo.fabricante}}</th>
+                              <th>
+                                    <a href="/veiculos/automovel/{{veiculo.id}}/">ver</a>
+                              </th>
+                        </tr>
+                        {% endfor %}
+                  </tbody>
+                  <tfoot>
+                        <tr>
+                              <p>O sistema encontrou {{veiculo | length}} veiculo(s) cadastrado(s)</p>
+                        </tr>
+                  </tfoot>
+            </table>
+      </div>
 {% endblock %}
