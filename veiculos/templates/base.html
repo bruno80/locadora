@@ -43,14 +43,15 @@
         <li> <a href="/veiculos/contato/"><i class="icon icon-inbox"></i> <span>Contato</span></a> </li>
       </ul>
     </div>
-  </div>
-  <div id="content">
-    <div class="container-fluid">
-      <div>
-        {% block content %}{% endblock %}
+    <div id="content">
+      <div class="container-fluid">
+        <div>
+          {% block content %}{% endblock %}
+        </div>
       </div>
     </div>
   </div>
+
   <script src="{% static 'js/excanvas.min.js' %}"></script>
   <script src="{% static 'js/jquery.min.js' %}"></script>
   <script src="{% static 'js/jquery.ui.custom.js' %}"></script>
