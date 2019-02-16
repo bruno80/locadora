@@ -1,21 +1,26 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>Detalhes do Automóvel!</h1>
-<div>
-      <label>Tipo:</label>
-      {{veiculo.tipo}}
+{% extends "base.html" %} {% block content %}
+<div id="content-header">
+      <div id="breadcrumb">
+            <a href="/veiculos/" title="Ir até a Home" class="tip-bottom">
+                  <i class="icon-home"></i> Home</a>
+            <a href="/veiculos/automovel" class="tip-bottom">Listagem de Auto's</a>
+            <a class="tip-bottom">Detalhes</a>
+      </div>
+      <h1>Detalhes do Automóvel!</h1>
+      <hr>
 </div>
-<div>
-      <label>Nome:</label>
-      {{veiculo.nome}}
+<div class="span12">
+      <div>
+            <label>Tipo: {{veiculo.tipo}}</label>
+      </div>
+      <div>
+            <label>Nome: {{veiculo.nome}}</label>
+      </div>
+      <div>
+            <label>Ano de Fabricação: {{veiculo.ano}}</label>
+      </div>
+      <div>
+            <label>Fabricante: {{veiculo.fabricante}}</label>
+      </div>
 </div>
-<div>
-      <label>Ano de Fabricação:</label>
-      {{veiculo.ano}}
-</div>
-<div>
-      <label>Fabricante:</label>
-      {{veiculo.fabricante}}
-</div>
-
 {% endblock %}
