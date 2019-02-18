@@ -1,37 +1,58 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <div id="row-fluid">
-      <div>
-            <h1>Contato</h1>
+      <div id="content-header">
+            <div id="breadcrumb">
+                  <a href="/veiculos/" title="Go to Home" class="tip-bottom">
+                        <i class="icon-home"></i> Home</a>
+                  <a class="tip-bottom">Contatos</a>
+            </div>
+            <h1>Como Falar Conosco?</h1>
       </div>
       <hr>
-      <div class="row-fluid">
-            <div class="span6">
+      <div class="span12">
+            <div class="row-fluid contato">
+                  <div class="span3">
+                        <div class="widget-box">
+                              <div class="widget-title">
+                                    <span class="icon">
+                                          <i class="icon-user"></i>
+                                    </span>
+                                    <h5>Contatos Disponíveis</h5>
+                              </div>
+                              <div class="widget-content nopadding">
+                                    <ul class="activity-list">
+                                          <li>
+                                                <a>
+                                                      <i class="icon-user"></i>
+                                                      <strong>Fixo:</strong>
+                                                      (00) 91234-5678</a>
+                                          </li>
+                                          <li>
+                                                <a>
+                                                      <i class="icon-envelope"></i>
+                                                      <strong>E-mail:</strong>
+                                                      local_car@gmail.com</a>
+                                          </li>
+                                          <li>
+                                                <a>
+                                                      <i class="icon-picture"></i>
+                                                      <strong>Instagram:</strong>
+                                                      @localcar</a>
+                                          </li>
+                                          <li>
+                                                <a>
+                                                      <i class="icon-user"></i>
+                                                      <strong>Contato do Admin:</strong>
 
-                  <div class="widget-box">
-                        <div class="widget-title"> <span class="icon"><i class="icon-user"></i></span>
-                              <h5>Contatos Disponíveis</h5>
-                        </div>
-                        <div class="widget-content nopadding">
-                              <ul class="activity-list">
-                                    <li><a> <i class="icon-user"></i> <strong>Fixo:</strong>
-                                                (00) 91234-5678</a></li>
-                                    <li><a> <i class="icon-envelope"></i> <strong>E-mail:</strong>
-                                                local_car@gmail.com</a></li>
-                                    <li><a> <i class="icon-picture"></i> <strong>Instagram:</strong>
-                                                @localcar</a></li>
-                                    <li><a> <i class="icon-user"></i> <strong>Contato do Admin:</strong>
-
-                                                (00) 98765-4321</a></li>
-                              </ul>
+                                                      (00) 98765-4321</a>
+                                          </li>
+                                    </ul>
+                              </div>
                         </div>
                   </div>
             </div>
       </div>
       <hr>
-
-</div>
 </div>
 <!--main-container-part-->
 

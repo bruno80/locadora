@@ -3,9 +3,6 @@
 <html lang="en">
 
 <head>
-  <title>Local Car</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
   <link rel="stylesheet" href="{% static 'css/bootstrap-responsive.min.css' %}" />
   <link rel="stylesheet" href="{% static 'css/fullcalendar.css' %}" />
@@ -13,44 +10,62 @@
   <link rel="stylesheet" href="{% static 'css/matrix-media.css' %}" />
   <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'css/jquery.gritter.css' %}" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-    crossorigin="anonymous">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
   <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet" />
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+  <title>Local Car</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div id="header">
-      <h1 id="nome-locadora">Local Car</h1>
+  <div id="header">
+    <h1 id="nome-locadora">
+      <a> Local Car</a>
+    </h1>
+    <div id="search">
+      <input type="text" placeholder="Search here..." />
+      <button type="submit" class="tip-bottom" title="Search">
+        <i class="icon-search icon-white"></i>
+      </button>
     </div>
+  </div>
 
-    <div id="sidebar">
-      <ul>
-        <li>
-          <a id="icone" href="/veiculos/">
-            <i class="icon icon-home"></i>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a id="icone" href="/veiculos/automovel/">
-            <i class="icon icon-th-list"></i>
-            <span>Listagem de Auto's</span>
-          </a>
-        </li>
-        <li> <a href="/veiculos/contato/"><i class="icon icon-inbox"></i> <span>Contato</span></a> </li>
-      </ul>
-    </div>
-    <div id="content">
-      <div class="container-fluid">
-        <div>
-          {% block content %}{% endblock %}
-        </div>
+  <div id="sidebar">
+    <ul>
+      <li>
+        <a id="icone" href="/veiculos/">
+          <i class="icon icon-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a id="icone" href="/veiculos/automovel/">
+          <i class="icon icon-th-list"></i>
+          <span>Listagem de Auto's</span>
+        </a>
+      </li>
+      <li>
+        <a href="/veiculos/contato/">
+          <i class="icon icon-inbox"></i>
+          <span>Contato</span>
+        </a>
+      </li>
+      <li class="submenu active">
+        <a href="#">
+          <i class="icon icon-list"></i>
+          <span>Forms</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div id="content">
+    <div class="container-header">
+      <div>
+        {% block content %}{% endblock %}
       </div>
     </div>
   </div>
+
 
   <script src="{% static 'js/excanvas.min.js' %}"></script>
   <script src="{% static 'js/jquery.min.js' %}"></script>
