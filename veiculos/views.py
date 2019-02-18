@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from . models import Veiculo
+from .models import Veiculo
+from .forms import VeiculoForm
 
 def home(request):
       return render(request, 'home.html', {})
@@ -15,3 +16,15 @@ def automovel_show(request, veiculo_id):
 
 def contato(request):
       return render(request, 'contato/contato.html')
+
+def automovel_form(request):
+    if (request.method == 'POST'):
+        form = VeiculoForm(request.POST)
+        if (form.is_valid()):
+            form.save() 
+            return redirect('/veiculos/automovel')          
+        else:
+            return render(request,'automovel/form.html', {'form':form})
+    else:      
+        form = VeiculoForm()
+        return render(request,'automovel/form.html', {'form':form})

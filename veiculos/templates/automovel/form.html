@@ -1,0 +1,73 @@
+{% extends "base.html" %} {% block content %}
+<div id="content-header">
+      <div id="breadcrumb">
+            <a href="/veiculos/" title="Ir até a Home" class="tip-bottom">
+                  <i class="icon-home"></i> Home</a>
+            <a href="/veiculos/automovel" class="tip-bottom">Forms</a>
+      </div>
+      <h1>Cadastro de Atomóvel</h1>
+      <hr>
+</div>
+
+<form action="/veiculos/automovel/form/" method="POST">
+      {% csrf_token %}
+      <div class="span12">
+            <div class="row-fluid-form">
+                  <section class="panel">
+                        <header class="panel-heading">
+                              Formulário Cliente
+                        </header>
+                        <div class="panel-body">
+                              <form role="form">
+                                    <div class="form-group">
+                                          <label for="{{for.tipo.id_for_label}}">
+                                                {{form.tipo.label}}
+                                          </label>
+                                          <div>
+                                                {{form.tipo}} {% for error in form.tipo.errors %}
+                                                <label for="{{for.tipo.id_for_label}}" class="error">{{error}}</label>
+                                                {% endfor %}
+                                          </div>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="{{for.nome.id_for_label}}">
+                                                {{form.nome.label}}
+                                          </label>
+                                          <div>
+                                                {{form.nome}} {% for error in form.nome.errors %}
+                                                <label for="{{for.nome.id_for_label}}" class="error">{{error}}</label>
+                                                {% endfor %}
+                                          </div>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="{{for.ano.id_for_label}}">
+                                                {{form.ano.label}}
+                                          </label>
+                                          <div>
+                                                {{form.ano}} {% for error in form.ano.errors %}
+                                                <label for="{{for.ano.id_for_label}}" class="error">{{error}}</label>
+                                                {% endfor %}
+                                          </div>
+                                    </div>
+                                    <div class="form-group">
+                                          <label for="{{for.fabricante.id_for_label}}">
+                                                {{form.fabricante.label}}
+                                          </label>
+                                          <div>
+                                                {{form.fabricante}} {% for error in form.fabricante.errors %}
+                                                <label for="{{for.fabricante.id_for_label}}" class="error">{{error}}</label>
+                                                {% endfor %}
+                                          </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                              </form>
+
+                        </div>
+                  </section>
+            </div>
+      </div>
+
+
+</form>
+
+{% endblock %}
