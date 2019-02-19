@@ -28,3 +28,17 @@ def automovel_form(request):
     else:      
         form = VeiculoForm()
         return render(request,'automovel/form.html', {'form':form})
+
+def automovel_edit(request, veiculo_id):
+    if (request.method == 'POST'):
+        veiculo = Veiculo.objects.get(pk=veiculo_id)
+        form = VeiculoForm(request.POST, instance=veiculo)
+        if (form.is_valid()):
+            form.save()
+            return redirect('/veiculos/automovel')
+        else:
+            return render(request,'automovel/edit.html', {'form':form, 'veiculo_id':veiculo_id})
+    else:
+        veiculo = Veiculo.objects.get(pk=veiculo_id)
+        form = VeiculoForm(instance=veiculo)
+        return render(request, 'automovel/edit.html', {'form':form, 'veiculo_id':veiculo_id})
